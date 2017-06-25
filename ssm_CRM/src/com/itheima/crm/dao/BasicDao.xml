@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 在这里写sql语句.记得用namespace与接口绑定 -->
+<mapper namespace="com.itheima.crm.dao.BasicDao">
+	<!-- 根据code查下拉列表 -->
+	<select id="selectDictByCode" parameterType="String" resultType="BasicDict">
+		select * from base_dict where dict_type_code=#{vv}
+	</select>
+	
+
+</mapper>
